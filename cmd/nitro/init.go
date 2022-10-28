@@ -82,7 +82,7 @@ func downloadInit(ctx context.Context, initConfig *InitConfig) (string, error) {
 	}
 	// TODO(magic) do we need ipfs: prefix?
 	if strings.HasPrefix(initConfig.Url, "ipfs:") {
-		ipfsNode, err := ipfshelper.CreateIpfsHelper(ctx, initConfig.DownloadPath, false)
+		ipfsNode, err := ipfshelper.CreateIpfsHelper(ctx, initConfig.DownloadPath, false, "nitro")
 		if err != nil {
 			return "", err
 		}
