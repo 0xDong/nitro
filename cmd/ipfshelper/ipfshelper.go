@@ -228,3 +228,8 @@ func createIpfsHelperImpl(ctx context.Context, repoDirectory string, clientOnly 
 	}
 	return &client, nil
 }
+
+// TODO break abstraction for now til we figure out what fns are needed
+func (h *IpfsHelper) GetAPI() icore.CoreAPI {
+	return h.api
+}
